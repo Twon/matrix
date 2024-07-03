@@ -21,9 +21,9 @@ jobs:
               lib: "libstdc++11"
             }
           - {
-                name: "Ubuntu GCC-13",
+                name: "Ubuntu GCC-14",
                 os: ubuntu-latest,
-                compiler: { type: GCC, version: 13, conan: "gcc", cc: "gcc-13", cxx: "g++-13", std: 23 },
+                compiler: { type: GCC, version: 14, conan: "gcc", cc: "gcc-13", cxx: "g++-13", std: 23 },
                 lib: "libstdc++11"
               }
           - {
@@ -72,20 +72,6 @@ jobs:
               name: "Visual Studio 2019",
               os: windows-latest,
               compiler: { type: VISUAL, version: 16, conan: "mscv", cc: "cl", cxx: "cl", std: 23 },
-            }
-          - {
-              name: "MacOS Apple Clang 14",
-              os: macos-13,
-              compiler:
-                {
-                  type: APPLE_CLANG,
-                  version: "14.3.1",
-                  conan: "apple-clang",
-                  cc: "clang",
-                  cxx: "clang++",
-                  std: 20
-                },
-              lib: "libc++",
             }
           - {
               name: "MacOS Apple Clang 15",
